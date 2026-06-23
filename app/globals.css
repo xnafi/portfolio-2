@@ -1,59 +1,72 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-    :root {
-        --background: 0 0% 13%;
-        --background-light: 0 0% 19%;
-        --foreground: 0 0% 87%;
-
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-
-        --primary: 140 100% 47%;
-        --primary-foreground: 0 0% 13%;
-        --secondary: 193 100% 47%;
-        --secondary-foreground: 0 0% 13%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 71%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 24%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
+@theme {
+  --color-background: hsl(0, 0%, 13%);
+  --color-background-light: hsl(0, 0%, 19%);
+  --color-background-active: hsl(0, 0%, 24%);
+  --color-foreground: hsl(0, 0%, 87%);
+  --color-card: hsl(0, 0%, 3.9%);
+  --color-card-foreground: hsl(0, 0%, 98%);
+  --color-popover: hsl(0, 0%, 3.9%);
+  --color-popover-foreground: hsl(0, 0%, 98%);
+  --color-primary: hsl(140, 100%, 47%);
+  --color-primary-foreground: hsl(0, 0%, 13%);
+  --color-primary-hover: hsl(140, 100%, 40%);
+  --color-secondary: hsl(193, 100%, 47%);
+  --color-secondary-foreground: hsl(0, 0%, 13%);
+  --color-secondary-hover: hsl(193, 100%, 40%);
+  --color-muted: hsl(0, 0%, 14.9%);
+  --color-muted-foreground: hsl(0, 0%, 71%);
+  --color-accent: hsl(0, 0%, 14.9%);
+  --color-accent-foreground: hsl(0, 0%, 98%);
+  --color-destructive: hsl(0, 62.8%, 30.6%);
+  --color-destructive-foreground: hsl(0, 0%, 98%);
+  --color-border: hsl(0, 0%, 24%);
+  --color-input: hsl(0, 0%, 14.9%);
+  --color-ring: hsl(0, 0%, 83.1%);
+  --color-chart-1: hsl(220, 70%, 50%);
+  --color-chart-2: hsl(160, 60%, 45%);
+  --color-chart-3: hsl(30, 80%, 55%);
+  --color-chart-4: hsl(280, 65%, 60%);
+  --color-chart-5: hsl(340, 75%, 55%);
+  --font-anton: "Anton", sans-serif;
+  --font-roboto-flex: "Roboto Flex", sans-serif;
 }
 
-@layer base {
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    * {
-        @apply border-border !cursor-none;
-    }
-    body {
-        @apply bg-background text-foreground font-roboto-flex;
-    }
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-background-light: hsl(0, 0%, 96%);
+    --color-background-active: hsl(0, 0%, 90%);
+    --color-foreground: hsl(0, 0%, 13%);
+    --color-card: hsl(0, 0%, 96%);
+    --color-card-foreground: hsl(0, 0%, 13%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(0, 0%, 13%);
+    --color-primary: hsl(140, 70%, 35%);
+    --color-primary-foreground: hsl(0, 0%, 100%);
+    --color-primary-hover: hsl(140, 70%, 28%);
+    --color-secondary: hsl(193, 70%, 35%);
+    --color-secondary-foreground: hsl(0, 0%, 100%);
+    --color-secondary-hover: hsl(193, 70%, 28%);
+    --color-muted: hsl(0, 0%, 93%);
+    --color-muted-foreground: hsl(0, 0%, 40%);
+    --color-accent: hsl(0, 0%, 93%);
+    --color-accent-foreground: hsl(0, 0%, 13%);
+    --color-destructive: hsl(0, 70%, 50%);
+    --color-destructive-foreground: hsl(0, 0%, 100%);
+    --color-border: hsl(0, 0%, 85%);
+    --color-input: hsl(0, 0%, 85%);
+    --color-ring: hsl(0, 0%, 30%);
+  }
 }
 
-@layer components {
-    .grid {
-        @apply gap-[25px];
-    }
+html {
+  scrollbar-width: none;
+}
 
-    .markdown-text ul {
-        @apply pl-5 mt-2 list-disc;
-    }
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-roboto-flex);
 }
