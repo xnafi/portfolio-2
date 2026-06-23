@@ -34,7 +34,10 @@ export default function RootLayout({
       lang="en"
       className={`${antonFont.variable} ${robotoFlex.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col max-w-350 mx-auto relative overflow-x-hidden">
+      <body
+        className="min-h-full flex flex-col max-w-350 px-4 lg:px-2 py-10 lg:py-0 mx-auto relative overflow-x-hidden"
+        suppressHydrationWarning
+      >
         {children}
         <ParticleBackground />
         <Preloader />
