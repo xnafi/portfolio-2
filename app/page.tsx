@@ -1,3 +1,9 @@
+import Banner from "@/src/components/Banner";
+
 export default function Home() {
-  return <div className="page-">HEllo</div>;
+  return (
+    <div className="page-">
+      <Banner />{" "}
+    </div>
+  );
 }
