@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Me from "../../public/assets/me.png";
 import React from "react";
+import Button from "./Re-Ui/Button";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -54,15 +55,16 @@ const AboutMe = () => {
   );
 
   return (
-    <section className="pb-section" id="about-me">
+    <section className="pb-section my-10" id="about-me">
       <div className="container" ref={container}>
-        <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-          I believe in a user centered design approach, ensuring that every
-          project I work on is tailored to meet the specific needs of its users.
+        <h2 className="text-4xl md:text-5xl font-thin mb-20 slide-up-and-fade">
+          I combine modern frontend technologies with performance-first
+          development practices to create scalable products that deliver both
+          business value and exceptional user experiences.
         </h2>
 
-        <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
-          This is me.
+        <p className="pb-3 border-b text-muted-foreground slide-up-and-fade text-lg">
+          About Me.
         </p>
 
         <div className="grid md:grid-cols-12 mt-9">
@@ -73,7 +75,7 @@ const AboutMe = () => {
             <Image
               src={Me}
               alt="Forhad Khan"
-              width={400}
+              width={450}
               height={400}
               className="bg-green-500 mt-6 slide-up-and-fade"
             />
@@ -112,6 +114,13 @@ const AboutMe = () => {
               <p className="mt-3 slide-up-and-fade">
                 Open to Frontend / React / Next.js opportunities
               </p>
+              <Button
+                href="https://drive.google.com/file/d/1uTiGGQJ6TmBtVpHFfUgqO5MguhQFPOJB/view"
+                target="_blank"
+                className="mt-6 slide-up-and-fade"
+              >
+                Download Resume
+              </Button>
             </div>
           </div>
         </div>

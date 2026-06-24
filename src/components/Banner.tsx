@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import React,  from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,28 +11,25 @@ import Button from "./Re-Ui/Button";
 gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
+  // move the content a little up on scroll
   useGSAP(
     () => {
-      const elements = gsap.utils.toArray(".slide-up-and-fade");
-
-      const animation = gsap.to(elements, {
-        y: -150,
-        opacity: 0,
-        stagger: 0.05,
-        ease: "none",
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "bottom 70%",
           end: "bottom 10%",
-          scrub: true,
+          scrub: 1,
         },
       });
 
-      return () => {
-        animation.kill();
-      };
+      tl.fromTo(
+        ".slide-up-and-fade",
+        { y: 0 },
+        { y: -150, opacity: 0, stagger: 0.02 },
+      );
     },
     { scope: containerRef },
   );
@@ -73,7 +70,7 @@ const Banner = () => {
           <div className="mt-3 flex items-center gap-2">
             <span className="size-3 rounded-full bg-green-500" />
 
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-muted-foreground slide-up-and-fade">
               Available for full-time opportunities
             </span>
           </div>
