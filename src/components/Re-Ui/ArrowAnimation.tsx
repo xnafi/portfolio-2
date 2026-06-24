@@ -52,19 +52,19 @@ const ArrowAnimation = () => {
       viewBox="0 0 376 111"
       fill="transparent"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute bottom-20 left-1/2 -translate-x-1/2 z-0"
+      className="absolute bottom-20 left-1/2 -translate-x-1/2 z-999"
       ref={svgRef}
     >
       <path
-        className="svg-arrow svg-arrow-1"
+        className="svg-arrow svg-arrow-1 z-999"
         d="M1 1V39.9286L188 110V70.6822L1 1Z"
-        stroke="#2C2C2C"
+        stroke="#813d3d"
         ref={arrow1Ref}
       />
       <path
-        className="svg-arrow svg-arrow-2"
+        className="svg-arrow svg-arrow-2 z-999"
         d="M375 1V39.9286L188 110V70.6822L375 1Z"
-        stroke="#2C2C2C"
+        stroke="#813d3d"
         ref={arrow2Ref}
       />
     </svg>
