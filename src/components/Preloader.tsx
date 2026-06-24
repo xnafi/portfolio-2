@@ -2,7 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import  { useRef } from "react";
 
 const Preloader = () => {
   const preloaderRef = useRef<HTMLDivElement>(null);
@@ -52,7 +52,7 @@ const Preloader = () => {
   const name = "FORHAD KHAN";
 
   return (
-    <div ref={preloaderRef} className="fixed inset-0 z-[9999] flex bg-black">
+    <div ref={preloaderRef} className="fixed inset-0 z-9999 flex bg-black">
       {Array.from({ length: 10 }).map((_, index) => (
         <div key={index} className="preloader-item h-full w-[10%] bg-black" />
       ))}

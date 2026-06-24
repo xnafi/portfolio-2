@@ -78,3 +78,44 @@ export const MY_STACK = [
   { name: "CSS3", icon: FaCss3Alt },
 ];
 
+export const MY_EXPERIENCE = [
+    {
+        title: "Front-End Developer",
+        company: "Elegant Web Studio",
+        duration: "Jan 2025 - Present",
+        type: "Remote",
+        website: "https://www.elegantwebstudio.dev",
+        achievements: [
+            "Spearheaded scalable React & Next.js architectures across multiple client applications.",
+            "Built and maintained a shared component library, reducing development time by 30%.",
+            "Collaborated closely with UI/UX designers to ensure pixel-perfect and accessible interfaces.",
+            "Conducted code reviews and mentored junior developers to improve code quality and team efficiency.",
+        ],
+    },
+    {
+        title: "Front-End Developer (Contract)",
+        company: "Al Jaami Technologies",
+        duration: "Apr 2023 - Jul 2023",
+        type: "Remote",
+        website: "https://www.aljaami.co.uk",
+        achievements: [
+            "Delivered 4+ fully responsive, SEO-optimized production websites.",
+            "Refactored legacy codebases, achieving up to 35% faster load times.",
+            "Improved developer workflow using ESLint and Prettier.",
+            "Integrated animation libraries to enhance UX and increase user session duration.",
+        ],
+    },
+    {
+        title: "Front-End Intern",
+        company: "Remostarts",
+        duration: "Dec 2022 - Mar 2023",
+        type: "Remote",
+        website: "https://remostarts.com",
+        achievements: [
+            "Developed dynamic dashboards and role-based admin portals.",
+            "Implemented form validation using React Hook Form and Zod.",
+            "Worked within Agile teams and contributed to 6+ successful sprint releases.",
+            "Designed modular layouts to support scalability and rapid feature delivery.",
+        ],
+    },
+];
