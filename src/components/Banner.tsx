@@ -1,12 +1,11 @@
 "use client";
-
-import React,  from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ArrowAnimation from "./Re-Ui/ArrowAnimation";
 import Button from "./Re-Ui/Button";
+import React from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -49,7 +49,11 @@ const Skills = () => {
   );
 
   return (
-    <section id="my-stack" ref={containerRef} className="py-section my-10">
+    <section
+      id="my-stack"
+      ref={containerRef}
+      className="py-section mt-20 mb-10"
+    >
       <div className="container">
         <SectionTitle title="My Stack" />
 
