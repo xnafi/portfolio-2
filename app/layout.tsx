@@ -3,6 +3,7 @@ import { Anton, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import ParticleBackground from "@/src/components/ParticleBackground";
 import Preloader from "@/src/components/Preloader";
+import ScrollProgressIndicator from "@/src/components/ScrollProgressIndicator";
 
 const antonFont = Anton({
   weight: "400",
@@ -35,12 +36,13 @@ export default function RootLayout({
       className={`${antonFont.variable} ${robotoFlex.variable} h-full antialiased`}
     >
       <body
-        className="min-h-full flex flex-col max-w-350 px-4 lg:px-2 py-10 lg:py-0 mx-auto relative overflow-x-hidden"
+        className="min-h-full flex flex-col"
         suppressHydrationWarning
       >
         {children}
         <ParticleBackground />
         <Preloader />
+        <ScrollProgressIndicator />
       </body>
     </html>
   );
