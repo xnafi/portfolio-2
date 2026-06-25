@@ -1,37 +1,25 @@
 "use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import ArrowAnimation from "./Re-Ui/ArrowAnimation";
 import Button from "./Re-Ui/Button";
 import React from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useScrollAnimation } from "@/src/hooks/useScrollAnimation";
 
 const Banner = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  // move the content a little up on scroll
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom 70%",
-          end: "bottom 10%",
-          scrub: 1,
-        },
-      });
-
-      tl.fromTo(
-        ".slide-up-and-fade",
-        { y: 0 },
-        { y: -150, opacity: 0, stagger: 0.02 },
-      );
+  useScrollAnimation({
+    scope: containerRef,
+    slideIn: false,
+    slideOut: {
+      target: ".slide-up-and-fade",
+      y: -150,
+      opacity: 0,
+      stagger: 0.02,
+      start: "bottom 70%",
+      end: "bottom 10%",
+      scrub: 1,
     },
-    { scope: containerRef },
-  );
+  });
 
   return (
     <section id="banner" className="relative overflow-hidden">
