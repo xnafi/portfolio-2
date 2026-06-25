@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import {  GiFlowerEmblem } from "react-icons/gi";
+import { GiFlowerEmblem } from "@/src/components/Icons";
 
 interface Props {
   icon?: ReactNode;
