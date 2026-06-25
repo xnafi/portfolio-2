@@ -1,4 +1,3 @@
-
 import {
     FaReact,
     FaNodeJs,
@@ -7,9 +6,6 @@ import {
     FaCss3Alt,
     FaStripe,
     FaMobileAlt,
-} from "react-icons/fa";
-
-import {
     SiJavascript,
     SiTypescript,
     SiTailwindcss,
@@ -29,11 +25,10 @@ import {
     SiMui,
     SiNextdotjs,
     SiGreensock,
-} from "react-icons/si";
-
-import { MdAnimation } from "react-icons/md";
-import { GiSpeedometer } from "react-icons/gi";
-import { HiOutlineSquares2X2 } from "react-icons/hi2";
+    MdAnimation,
+    GiSpeedometer,
+    HiOutlineSquares2X2,
+} from "@/src/components/Icons";
 
 export const MY_STACK = [
     { name: "React.js", icon: FaReact },
