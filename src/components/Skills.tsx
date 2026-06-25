@@ -1,52 +1,34 @@
 "use client";
 
 import { MY_STACK } from "@/lib/data";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-
 import SectionTitle from "./Re-Ui/SectionTitle";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useScrollAnimation } from "@/src/hooks/useScrollAnimation";
 
 const Skills = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      gsap.from(".slide-up", {
-        opacity: 0,
-        y: 40,
-        stagger: 0.05,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom 80%",
-          scrub: 0.5,
-        },
-      });
+  useScrollAnimation({
+    scope: containerRef,
+    slideIn: {
+      target: ".slide-up",
+      y: 40,
+      opacity: 0,
+      stagger: 0.05,
+      start: "top 80%",
+      end: "bottom 80%",
+      scrub: 0.5,
     },
-    { scope: containerRef },
-  );
-
-  useGSAP(
-    () => {
-      gsap.to(containerRef.current, {
-        y: -150,
-        opacity: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom 50%",
-          end: "bottom 10%",
-          scrub: 1,
-        },
-      });
+    slideOut: {
+      target: ".slide-up",
+      y: -150,
+      opacity: 0,
+      stagger: 0.02,
+      start: "bottom 50%",
+      end: "bottom 30%",
+      scrub: 1,
     },
-    { scope: containerRef },
-  );
+  });
 
   return (
     <section
