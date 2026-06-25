@@ -3,7 +3,7 @@
 import { MY_EXPERIENCE } from "@/lib/data";
 import Link from "next/link";
 import { useRef } from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight } from "@/src/components/Icons";
 import SectionTitle from "./Re-Ui/SectionTitle";
 import { useScrollAnimation } from "@/src/hooks/useScrollAnimation";
 
@@ -62,6 +62,7 @@ const Experiences = () => {
                   href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit ${item.company} website`}
                   className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
                 >
                   Visit Website
