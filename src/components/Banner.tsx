@@ -54,10 +54,10 @@ const Banner = () => {
             Let&apos;s Talk
           </Button>
 
-          <div className="mt-3 flex items-center gap-2">
+          <div className="mt-3 flex items-center gap-2 slide-up-and-fade">
             <span className="size-3 rounded-full bg-green-500" />
 
-            <span className="text-sm text-muted-foreground slide-up-and-fade">
+            <span className="text-sm text-muted-foreground">
               Available for full-time opportunities
             </span>
           </div>
