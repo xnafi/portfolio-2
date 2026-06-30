@@ -5,6 +5,14 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { AdaptiveDpr, Text } from "@react-three/drei";
 import * as THREE from "three";
 
+// ── Suppress specific THREE.js deprecation warnings from library internals ──
+const _origWarn = console.warn.bind(console);
+console.warn = (...args: unknown[]) => {
+  const msg = args.map(String).join(" ");
+  if (msg.includes("THREE.Clock") || msg.includes("has been deprecated")) return;
+  _origWarn(...args);
+};
+
 // ── Seeded pseudo-random (deterministic based on seed) ──
 function createRng(seed: number) {
   let s = seed;
