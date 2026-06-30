@@ -167,7 +167,7 @@ const TECH_GLOBES: GlobeData[] = [
   { name: "TypeScript", baseColor: "#0a1a2e", accentColor: "#3178c6", glowColor: "#3178c6", radius: 0.45, travelSpeed: 1.0, rotationSpeed: 0.5, spawnX: -3, spawnY: -2, initProgress: 0.1, initDepth: -32 },
   { name: "Tailwind", baseColor: "#0a1a2a", accentColor: "#06b6d4", glowColor: "#06b6d4", radius: 0.5, travelSpeed: 0.7, rotationSpeed: 0.35, spawnX: 6, spawnY: 3, initProgress: 0.5, initDepth: -28 },
   { name: "Node.js", baseColor: "#0a1a0a", accentColor: "#339933", glowColor: "#339933", radius: 0.5, travelSpeed: 0.9, rotationSpeed: 0.45, spawnX: -5, spawnY: -1.5, initProgress: 0.9, initDepth: -22 },
-  { name: "Three.js", baseColor: "#1a1a2e", accentColor: "#ffffff", glowColor: "#4fc3f7", radius: 0.4, travelSpeed: 1.2, rotationSpeed: 0.6, spawnX: 3, spawnY: 3, initProgress: 0.2, initDepth: -33 },
+  { name: "React Native", baseColor: "#1a1a2e", accentColor: "#ffffff", glowColor: "#4fc3f7", radius: 0.4, travelSpeed: 1.2, rotationSpeed: 0.6, spawnX: 3, spawnY: 3, initProgress: 0.2, initDepth: -33 },
 ];
 
 const Z_NEAR = 15;
@@ -301,17 +301,19 @@ function TechGlobe({
     depth: data.initDepth,
     x: data.spawnX,
     y: data.spawnY,
+    elapsed: 0,
   });
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     const group = groupRef.current;
     const sphere = sphereRef.current;
     const glow = glowRef.current;
     if (!group || !sphere || !glow) return;
 
     const d = dataRef.current;
+    d.elapsed += delta;
     const speed = data.travelSpeed;
-    const aspect = state.viewport.width / state.viewport.height;
+    const aspect = _state.viewport.width / _state.viewport.height;
 
     // Travel progress
     d.progress += delta * speed * 0.015;
@@ -335,14 +337,14 @@ function TechGlobe({
     group.position.z = zPos;
 
     // Gentle float wobble on Y
-    group.position.y += Math.sin(state.clock.elapsedTime * 0.5 + d.x + d.y) * 0.1;
+    group.position.y += Math.sin(d.elapsed * 0.5 + d.x + d.y) * 0.1;
 
     // Rotate sphere slowly like a real planet
     sphere.rotation.y += delta * data.rotationSpeed;
     sphere.rotation.x += delta * data.rotationSpeed * 0.2;
 
     // Pulse glow
-    const pulse = 1 + Math.sin(state.clock.elapsedTime * 1.2 + d.x) * 0.08;
+    const pulse = 1 + Math.sin(d.elapsed * 1.2 + d.x) * 0.08;
     glow.scale.setScalar(pulse);
 
     // Fade near camera
