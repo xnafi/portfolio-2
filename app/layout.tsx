@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Roboto_Flex } from "next/font/google";
 import "./globals.css";
-import ParticleBackground from "@/src/components/ParticleBackground";
+import GalaxyBackground from "@/src/components/GalaxyBackground";
 import Preloader from "@/src/components/Preloader";
 import ScrollProgressIndicator from "@/src/components/ScrollProgressIndicator";
 import CustomCursor from "@/src/components/CustomCursor";
@@ -40,9 +40,11 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         suppressHydrationWarning
       >
-        {children}
+        <div className="relative z-10 flex flex-col min-h-full">
+          {children}
+        </div>
         <CustomCursor />
-        <ParticleBackground />
+        <GalaxyBackground />
         <Preloader />
         <ScrollProgressIndicator />
       </body>
