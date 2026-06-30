@@ -1,63 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: hsl(200, 10%, 12%);
-  --color-background-light: hsl(200, 8%, 17%);
-  --color-background-active: hsl(200, 8%, 22%);
-  --color-foreground: hsl(200, 5%, 82%);
-  --color-card: hsl(200, 8%, 15%);
-  --color-card-foreground: hsl(200, 5%, 95%);
-  --color-popover: hsl(200, 8%, 15%);
-  --color-popover-foreground: hsl(200, 5%, 95%);
-  --color-primary: hsl(185, 60%, 50%);
-  --color-primary-foreground: hsl(0, 0%, 10%);
-  --color-primary-hover: hsl(185, 60%, 42%);
-  --color-secondary: hsl(35, 60%, 55%);
-  --color-secondary-foreground: hsl(0, 0%, 10%);
-  --color-secondary-hover: hsl(35, 60%, 45%);
-  --color-muted: hsl(200, 8%, 14%);
-  --color-muted-foreground: hsl(200, 3%, 65%);
-  --color-accent: hsl(200, 8%, 14%);
-  --color-accent-foreground: hsl(200, 5%, 95%);
-  --color-destructive: hsl(0, 62.8%, 30.6%);
+  --color-background: hsl(30, 12%, 10%);
+  --color-background-light: hsl(30, 10%, 16%);
+  --color-background-active: hsl(30, 8%, 22%);
+  --color-foreground: hsl(35, 8%, 86%);
+  --color-card: hsl(30, 10%, 14%);
+  --color-card-foreground: hsl(35, 8%, 92%);
+  --color-popover: hsl(30, 10%, 14%);
+  --color-popover-foreground: hsl(35, 8%, 92%);
+  --color-primary: hsl(38, 92%, 52%);
+  --color-primary-foreground: hsl(30, 12%, 10%);
+  --color-primary-hover: hsl(38, 92%, 44%);
+  --color-secondary: hsl(175, 60%, 48%);
+  --color-secondary-foreground: hsl(30, 12%, 10%);
+  --color-secondary-hover: hsl(175, 60%, 40%);
+  --color-muted: hsl(30, 8%, 14%);
+  --color-muted-foreground: hsl(35, 6%, 70%);
+  --color-accent: hsl(30, 8%, 14%);
+  --color-accent-foreground: hsl(35, 8%, 92%);
+  --color-destructive: hsl(0, 62.8%, 35%);
   --color-destructive-foreground: hsl(0, 0%, 98%);
-  --color-border: hsl(200, 8%, 22%);
-  --color-input: hsl(200, 8%, 14%);
-  --color-ring: hsl(200, 5%, 80%);
-  --color-chart-1: hsl(185, 60%, 50%);
-  --color-chart-2: hsl(35, 60%, 55%);
-  --color-chart-3: hsl(160, 60%, 45%);
-  --color-chart-4: hsl(280, 65%, 60%);
-  --color-chart-5: hsl(340, 75%, 55%);
+  --color-border: hsl(30, 8%, 22%);
+  --color-input: hsl(30, 8%, 14%);
+  --color-ring: hsl(35, 8%, 80%);
+  --color-chart-1: hsl(38, 92%, 52%);
+  --color-chart-2: hsl(175, 60%, 48%);
+  --color-chart-3: hsl(160, 60%, 50%);
+  --color-chart-4: hsl(280, 65%, 65%);
+  --color-chart-5: hsl(340, 75%, 60%);
   --font-anton: "Anton", sans-serif;
   --font-roboto-flex: "Roboto Flex", sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-background: hsl(40, 15%, 95%);
-    --color-background-light: hsl(40, 12%, 90%);
-    --color-background-active: hsl(40, 10%, 85%);
-    --color-foreground: hsl(200, 15%, 15%);
-    --color-card: hsl(40, 10%, 92%);
-    --color-card-foreground: hsl(200, 15%, 15%);
-    --color-popover: hsl(40, 15%, 95%);
-    --color-popover-foreground: hsl(200, 15%, 15%);
-    --color-primary: hsl(185, 55%, 32%);
+    --color-background: hsl(40, 30%, 97%);
+    --color-background-light: hsl(40, 25%, 92%);
+    --color-background-active: hsl(40, 20%, 86%);
+    --color-foreground: hsl(30, 20%, 14%);
+    --color-card: hsl(40, 20%, 93%);
+    --color-card-foreground: hsl(30, 20%, 14%);
+    --color-popover: hsl(40, 30%, 97%);
+    --color-popover-foreground: hsl(30, 20%, 14%);
+    --color-primary: hsl(38, 80%, 38%);
     --color-primary-foreground: hsl(0, 0%, 100%);
-    --color-primary-hover: hsl(185, 55%, 25%);
-    --color-secondary: hsl(35, 55%, 38%);
+    --color-primary-hover: hsl(38, 80%, 30%);
+    --color-secondary: hsl(175, 55%, 34%);
     --color-secondary-foreground: hsl(0, 0%, 100%);
-    --color-secondary-hover: hsl(35, 55%, 30%);
-    --color-muted: hsl(40, 8%, 88%);
-    --color-muted-foreground: hsl(200, 5%, 40%);
-    --color-accent: hsl(40, 8%, 88%);
-    --color-accent-foreground: hsl(200, 15%, 15%);
+    --color-secondary-hover: hsl(175, 55%, 27%);
+    --color-muted: hsl(40, 15%, 89%);
+    --color-muted-foreground: hsl(30, 10%, 40%);
+    --color-accent: hsl(40, 15%, 89%);
+    --color-accent-foreground: hsl(30, 20%, 14%);
     --color-destructive: hsl(0, 70%, 50%);
     --color-destructive-foreground: hsl(0, 0%, 100%);
-    --color-border: hsl(35, 10%, 85%);
-    --color-input: hsl(35, 10%, 85%);
-    --color-ring: hsl(200, 10%, 30%);
+    --color-border: hsl(35, 15%, 85%);
+    --color-input: hsl(35, 15%, 85%);
+    --color-ring: hsl(30, 20%, 30%);
   }
 }
 
@@ -66,7 +66,7 @@ html {
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: black !important;
   color: var(--color-foreground);
   font-family: var(--font-roboto-flex);
 }
