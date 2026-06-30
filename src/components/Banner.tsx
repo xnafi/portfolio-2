@@ -37,12 +37,11 @@ const Banner = () => {
           </h1>
 
           <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
-            Hi, I’m{" "}
+            Hi, I&apos;m{" "}
             <span className="font-medium text-foreground">Forhad Khan</span>.
-            Frontend Developer with 3+ years of experience building scalable
-            SaaS platforms and modern web applications using React, Next.js,
-            TypeScript, Tailwind CSS, and performance-focused frontend
-            architecture.
+            Frontend Developer with 3+ years of experience building scalable,
+            high-performance web applications using React, Next.js, TypeScript,
+            Tailwind CSS, and modern frontend architecture.
           </p>
 
           <Button

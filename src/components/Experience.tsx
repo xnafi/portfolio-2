@@ -6,7 +6,6 @@ import { useRef } from "react";
 import { FiArrowUpRight } from "@/src/components/Icons";
 import SectionTitle from "./Re-Ui/SectionTitle";
 import { useScrollAnimation } from "@/src/hooks/useScrollAnimation";
-import Button from "./Re-Ui/Button";
 
 const Experiences = () => {
   const containerRef = useRef<HTMLDivElement>(null);
