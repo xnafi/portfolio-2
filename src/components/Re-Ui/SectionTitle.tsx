@@ -24,12 +24,12 @@ const SectionTitle = ({ icon, title, className, classNames }: Props) => {
       ) : (
         <GiFlowerEmblem
           size={40}
-          className={`animate-spin [animation-duration:15s] ${classNames?.icon ?? ""}`}
+          className={`animate-spin [animation-duration:15s] text-primary ${classNames?.icon ?? ""}`}
         />
       )}
 
       <h2
-        className={`text-xl uppercase leading-none ${classNames?.title ?? ""}`}
+        className={`text-xl uppercase leading-none text-foreground ${classNames?.title ?? ""}`}
       >
         {title}
       </h2>
