@@ -44,14 +44,24 @@ const Banner = () => {
             Tailwind CSS, and modern frontend architecture.
           </p>
 
-          <Button
-            as="link"
-            href="#contact"
-            variant="primary"
-            className="banner-button slide-up-and-fade mt-9"
-          >
-            Let&apos;s Talk
-          </Button>
+          <div className="flex md:items-center gap-4 max-md:flex-col items-start mt-9 slide-up-and-fade">
+            <Button
+              as="link"
+              href="#contact"
+              variant="primary"
+              className="banner-button"
+            >
+              Let&apos;s Talk
+            </Button>
+
+            <Button
+              href="https://drive.google.com/file/d/1uTiGGQJ6TmBtVpHFfUgqO5MguhQFPOJB/view"
+              target="_blank"
+              variant="secondary"
+            >
+              Download Resume
+            </Button>
+          </div>
 
           <div className="mt-3 flex items-center gap-2 slide-up-and-fade">
             <span className="size-3 rounded-full bg-green-500" />
