@@ -46,10 +46,9 @@ const Skills = () => {
             return (
               <div
                 key={item.name}
-                className="slide-up flex flex-col items-center justify-center gap-4 text-center bg-primary p-5 text-black rounded-2xl transition-transform duration-300 hover:-translate-y-2"
+                className="slide-up flex flex-col items-center justify-center gap-4 text-center bg-secondary p-5 text-black rounded-2xl transition-transform duration-300 hover:-translate-y-2"
               >
                 <Icon size={40} />
-
                 <span className="text-lg md:text-xl">{item.name}</span>
               </div>
             );
