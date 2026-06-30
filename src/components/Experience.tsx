@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { FiArrowUpRight } from "@/src/components/Icons";
 import SectionTitle from "./Re-Ui/SectionTitle";
 import { useScrollAnimation } from "@/src/hooks/useScrollAnimation";
+import Button from "./Re-Ui/Button";
 
 const Experiences = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,7 +34,10 @@ const Experiences = () => {
   });
 
   return (
-    <section id="my-experience" className="py-section overflow-hidden mt-20 mb-10">
+    <section
+      id="my-experience"
+      className="py-section overflow-hidden mt-20 mb-10"
+    >
       <div ref={containerRef} className="container">
         <SectionTitle title="My Experience" />
 
@@ -45,7 +49,7 @@ const Experiences = () => {
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <p className="text-xl text-muted-foreground">
+                  <p className="text-xl text-primary">
                     {item.company}
                   </p>
 
@@ -59,11 +63,12 @@ const Experiences = () => {
                 </div>
 
                 <Link
+                  as="link"
                   href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit ${item.company} website`}
-                  className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+                  className="inline-flex items-center gap-2 text-secondary transition-colors hover:text-secondary-hover"
                 >
                   Visit Website
                   <FiArrowUpRight />
