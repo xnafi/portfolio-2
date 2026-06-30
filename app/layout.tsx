@@ -4,6 +4,7 @@ import "./globals.css";
 import ParticleBackground from "@/src/components/ParticleBackground";
 import Preloader from "@/src/components/Preloader";
 import ScrollProgressIndicator from "@/src/components/ScrollProgressIndicator";
+import CustomCursor from "@/src/components/CustomCursor";
 
 const antonFont = Anton({
   weight: "400",
@@ -40,6 +41,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <CustomCursor />
         <ParticleBackground />
         <Preloader />
         <ScrollProgressIndicator />
