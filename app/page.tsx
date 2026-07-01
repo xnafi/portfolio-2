@@ -2,6 +2,7 @@ import AboutMe from "@/src/components/About";
 import Banner from "@/src/components/Banner";
 import Experiences from "@/src/components/Experience";
 import Skills from "@/src/components/Skills";
+import ProjectList from "@/src/components/ProjectList";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Experiences />
+      <ProjectList />
     </main>
   );
 }
