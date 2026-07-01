@@ -3,10 +3,9 @@ import { IProject } from "@/types";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { LuArrowLeft, LuExternalLink, LuGithub } from "@/src/components/Icons";
 import { useRef } from "react";
 import parse from "html-react-parser";
-import ArrowAnimation from "../../../src/components/Re-Ui/ArrowAnimation";
 import TransitionLink from "../../../src/components/Re-Ui/TransitionLink";
 import Link from "next/link";
 
@@ -93,7 +92,7 @@ const ProjectDetails = ({ project }: Props) => {
           href="/"
           className="mb-16 inline-flex gap-2 items-center group h-12"
         >
-          <ArrowLeft className="group-hover:-translate-x-1 group-hover:text-primary transition-all duration-300" />
+          <LuArrowLeft className="group-hover:-translate-x-1 group-hover:text-primary transition-all duration-300" />
           Back
         </TransitionLink>
 
@@ -113,7 +112,7 @@ const ProjectDetails = ({ project }: Props) => {
                     rel="noreferrer noopener"
                     className="inline-flex items-center gap-2 text-secondary transition-colors hover:text-secondary-hover"
                   >
-                    <Github size={30} />
+                    <LuGithub size={30} />
                   </Link>
                 )}
                 {project.liveUrl && (
@@ -125,7 +124,7 @@ const ProjectDetails = ({ project }: Props) => {
                     className="inline-flex items-center gap-2 text-secondary transition-colors hover:text-secondary-hover"
                   >
                     Visit Website
-                    <ExternalLink size={30} />
+                    <LuExternalLink size={30} />
                   </Link>
                 )}
               </div>
@@ -163,8 +162,6 @@ const ProjectDetails = ({ project }: Props) => {
                 </div>
               )}
             </div>
-
-            <ArrowAnimation />
           </div>
         </div>
 
@@ -188,7 +185,7 @@ const ProjectDetails = ({ project }: Props) => {
                 target="_blank"
                 className="absolute top-4 right-4 bg-background/70 text-foreground size-12 inline-flex justify-center items-center transition-all opacity-0 hover:bg-primary hover:text-primary-foreground group-hover:opacity-100"
               >
-                <ExternalLink />
+                <LuExternalLink />
               </a>
             </div>
           ))}
