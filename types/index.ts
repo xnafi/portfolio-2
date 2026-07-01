@@ -14,6 +14,7 @@ export type Variant =
 
 export interface IProject {
     title: string;
+    live: string;
     year: number;
     description: string;
     role: string;
