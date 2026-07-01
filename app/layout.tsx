@@ -5,6 +5,7 @@ import GalaxyBackground from "@/src/components/GalaxyBackground";
 import Preloader from "@/src/components/Preloader";
 import ScrollProgressIndicator from "@/src/components/ScrollProgressIndicator";
 import CustomCursor from "@/src/components/CustomCursor";
+import PageTransition from "./PageTransition";
 
 const antonFont = Anton({
   weight: "400",
@@ -40,6 +41,10 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         suppressHydrationWarning
       >
+        <div className="page-transition fixed inset-0 z-50 pointer-events-none">
+          <div className="page-transition--inner w-full h-full bg-background" />
+        </div>
+        <PageTransition />
         <div className="relative z-10 flex flex-col min-h-full">
           {children}
         </div>
