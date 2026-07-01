@@ -229,9 +229,13 @@ export const PROJECTS: IProject[] = [
             "Rollup",
             "NPM",
         ],
-        thumbnail: "/projects/thumbnail/scroll-animation.webp",
-        longThumbnail: "/projects/long/scroll-animation.webp",
-        images: [],
+        thumbnail: "/projects/thumbnail/scroll-animation.png",
+        longThumbnail: "/projects/long/scroll-animation.png",
+        images: [
+            "/assets/scroll-animation.png",
+            "/assets/scroll-animation1.png",
+            "/assets/scroll-animation2.png"
+        ],
         liveUrl: "",
         year: 2026,
         description: `
