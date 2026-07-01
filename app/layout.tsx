@@ -42,7 +42,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <div className="page-transition fixed inset-0 z-50 pointer-events-none">
-          <div className="page-transition--inner w-full h-full bg-background" />
+          <div className="page-transition--inner w-full h-full bg-primary" />
         </div>
         <PageTransition />
         <div className="relative z-10 flex flex-col min-h-full">

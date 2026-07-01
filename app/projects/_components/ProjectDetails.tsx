@@ -8,6 +8,7 @@ import { useRef } from "react";
 import parse from "html-react-parser";
 import ArrowAnimation from "../../../src/components/Re-Ui/ArrowAnimation";
 import TransitionLink from "../../../src/components/Re-Ui/TransitionLink";
+import Link from "next/link";
 
 interface Props {
   project: IProject;
@@ -85,7 +86,7 @@ const ProjectDetails = ({ project }: Props) => {
   );
 
   return (
-    <section className="pt-5 pb-14 max-w-350 mx-auto">
+    <section className="pt-5 pb-14 max-w-350 mx-auto container px-4 lg:px-2">
       <div className="container" ref={containerRef}>
         <TransitionLink
           back
@@ -97,7 +98,7 @@ const ProjectDetails = ({ project }: Props) => {
         </TransitionLink>
 
         <div className="top-0 min-h-[calc(100svh-100px)] flex" id="info">
-          <div className="relative w-full">
+          <div className="relative max-w-250 mx-start">
             <div className="flex items-start gap-6 mx-auto mb-10">
               <h1 className="fade-in-later opacity-0 text-4xl md:text-[60px] leading-none font-anton overflow-hidden">
                 <span className="inline-block">{project.title}</span>
@@ -105,24 +106,27 @@ const ProjectDetails = ({ project }: Props) => {
 
               <div className="fade-in-later opacity-0 flex gap-2">
                 {project.sourceCode && (
-                  <a
+                  <Link
                     href={project.sourceCode}
                     target="_blank"
+                    aria-label={`View ${project.title} source code`}
                     rel="noreferrer noopener"
-                    className="hover:text-primary"
+                    className="inline-flex items-center gap-2 text-secondary transition-colors hover:text-secondary-hover"
                   >
                     <Github size={30} />
-                  </a>
+                  </Link>
                 )}
                 {project.liveUrl && (
-                  <a
+                  <Link
                     href={project.liveUrl}
                     target="_blank"
-                    rel="noreferrer noopener"
-                    className="hover:text-primary"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.title} website`}
+                    className="inline-flex items-center gap-2 text-secondary transition-colors hover:text-secondary-hover"
                   >
+                    Visit Website
                     <ExternalLink size={30} />
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>

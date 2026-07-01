@@ -119,7 +119,6 @@ export const MY_EXPERIENCE = [
 export const PROJECTS: IProject[] = [
     {
         title: "Fleet Stack",
-        live:"https://fleet-stack.vercel.app/super-admin",
         slug: "fleet-stack",
         techStack: [
             "Next.js 16",
@@ -133,14 +132,14 @@ export const PROJECTS: IProject[] = [
             "Recharts",
             "Leaflet",
         ],
-        thumbnail: "/projects/thumbnail/fleet-stack.webp",
-        longThumbnail: "/projects/long/fleet-stack.webp",
+        thumbnail: "/assets/fleet-stack-1.jpg",
+        longThumbnail: "/assets/fleet-stack-1.jpg",
         images: [
-            "/projects/images/fleet-stack-1.webp",
-            "/projects/images/fleet-stack-2.webp",
-            "/projects/images/fleet-stack-3.webp",
+            "/assets/fleet-stack-1.jpg",
+            "/assets/fleet-stack-2.png",
+            "/assets/fleet-stack-3.jpg",
         ],
-        liveUrl: "",
+        liveUrl: "https://fleet-stack.vercel.app/super-admin",
         year: 2026,
         description: `
   Fleet Stack is a modern fleet management platform designed for enterprise operations. Built with Next.js 16 and React 19, it provides administrators with powerful tools to manage vehicles, drivers, trips, analytics, and operational workflows through a scalable dashboard.

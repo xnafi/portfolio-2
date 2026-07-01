@@ -55,6 +55,7 @@ const Banner = () => {
             </Button>
 
             <Button
+              as="link"
               href="https://drive.google.com/file/d/1uTiGGQJ6TmBtVpHFfUgqO5MguhQFPOJB/view"
               target="_blank"
               variant="secondary"
