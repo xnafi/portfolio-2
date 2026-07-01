@@ -181,9 +181,15 @@ export const PROJECTS: IProject[] = [
             "Cloudinary",
             "Stripe",
         ],
-        thumbnail: "/projects/thumbnail/maczen.webp",
-        longThumbnail: "/projects/long/maczen.webp",
-        images: [],
+        thumbnail: "/projects/thumbnail/maczen.jpg",
+        longThumbnail: "/projects/long/maczen.jpg",
+        images: [
+            "/assets/maczen.jpg",
+            "/assets/maczen-1.jpg",
+            "/assets/maczen-2.jpg",
+            "/assets/maczen-3.png",
+            "/assets/maczen-4.png",
+        ],
         liveUrl: "https://maczenbd.com",
         year: 2026,
         description: `
